@@ -1,0 +1,945 @@
+# COMPLETE USER FLOWS (MVP)
+
+This flow system is optimized for:
+
+* Nigerian mobile-first behavior
+* Low patience threshold
+* WhatsApp-style familiarity
+* Minimal typing
+* Fast task completion
+* Low digital literacy support
+* Poor network resilience
+
+The philosophy is:
+
+> “One primary action per screen.”
+
+Avoid enterprise-style complex dashboards during onboarding. Nigerian users generally respond better to:
+
+* direct CTAs
+* progressive disclosure
+* short forms
+* visible confirmations
+* WhatsApp-like interaction patterns
+* immediate feedback after every action
+
+---
+
+# 1. ORGANIZER FLOW
+
+# 1.1 Organizer Onboarding Flow
+
+## Goal
+
+Get organizer into event creation within 2 minutes.
+
+---
+
+## Flow
+
+### Screen 1 — Landing Page
+
+Primary CTA:
+
+* “Create Event”
+
+Secondary CTA:
+
+* “Join Existing Team”
+
+---
+
+### Screen 2 — Authentication
+
+Preferred Nigerian-friendly auth:
+
+* Phone number OR email
+* OTP verification
+
+Avoid:
+
+* long passwords during onboarding
+
+---
+
+### Flow
+
+Enter phone/email → receive OTP → verify → continue
+
+---
+
+### Screen 3 — Quick Profile Setup
+
+Fields:
+
+* Full Name
+* Event Brand/Company Name (optional)
+
+CTA:
+
+* “Continue”
+
+---
+
+### Screen 4 — First Event Prompt
+
+Large CTA:
+
+* “Create Your First Event”
+
+Avoid dashboard-first experience.
+
+---
+
+# 1.2 Create Event Flow
+
+## Goal
+
+Create event in under 3 minutes.
+
+---
+
+## Flow
+
+### Step 1 — Basic Event Details
+
+Fields:
+
+* Event Name
+* Event Type
+* Date
+* Time
+* Venue
+
+CTA:
+
+* “Next”
+
+---
+
+### Step 2 — Event Capacity
+
+Fields:
+
+* Expected Guests
+* Seating Type
+
+  * Table seating
+  * Open seating
+
+Optional toggle:
+
+* Enable Aso Ebi sales
+
+---
+
+### Step 3 — Event Roles
+
+Options:
+
+* Add Planner
+* Add Security Staff
+
+Method:
+
+* Invite by phone/email
+
+Can skip.
+
+---
+
+### Step 4 — Confirmation
+
+System creates:
+
+* Event dashboard
+* Event ID
+* Initial QR infrastructure
+
+CTA:
+
+* “Add Guests”
+
+---
+
+# 1.3 Guest Upload Flow
+
+Nigerian users commonly use:
+
+* Excel
+* WhatsApp contacts
+* Copy-paste lists
+
+Support all three.
+
+---
+
+## Flow Option A — CSV Upload
+
+### Step 1
+
+Upload CSV
+
+---
+
+### Step 2
+
+Preview detected fields:
+
+* Name
+* Phone
+* Email
+* Category
+* Plus One
+
+---
+
+### Step 3
+
+System auto-detects duplicates.
+
+Suggestions:
+
+* Merge
+* Skip duplicate
+* Replace existing
+
+---
+
+### Step 4
+
+Import success summary:
+
+* Guests added
+* Duplicates skipped
+* Missing data warnings
+
+CTA:
+
+* “Send Invites”
+
+---
+
+## Flow Option B — Manual Entry
+
+Optimized for quick addition.
+
+Fields:
+
+* Name
+* Phone
+
+Optional:
+
+* Email
+* Category
+
+CTA:
+
+* “Add Another”
+
+Fast repetitive flow.
+
+---
+
+## Flow Option C — Share Registration Link
+
+Organizer generates:
+
+* Public RSVP form link
+
+Can share via:
+
+* WhatsApp
+* Instagram bio
+* SMS
+
+---
+
+# 1.4 Invitation Sending Flow
+
+## Goal
+
+One-tap invite distribution.
+
+---
+
+## Flow
+
+### Step 1
+
+Select audience:
+
+* All guests
+* Pending only
+* VIPs
+
+---
+
+### Step 2
+
+Choose channel:
+
+* WhatsApp
+* SMS
+* Email
+
+WhatsApp should be primary CTA in Nigeria.
+
+---
+
+### Step 3
+
+Preview invite message.
+
+---
+
+### Step 4
+
+Send invites.
+
+System generates:
+
+* QR pass
+* RSVP link
+* Event reminder metadata
+
+---
+
+# 1.5 RSVP Monitoring Flow
+
+## Dashboard Sections
+
+Cards:
+
+* Total Guests
+* RSVP Yes
+* Pending
+* Declined
+* Checked In
+
+---
+
+## Actions
+
+Organizer can:
+
+* filter guests
+* resend invites
+* message pending guests
+* export lists
+
+---
+
+# 1.6 Seating Setup Flow
+
+This must NOT feel like complex CAD software.
+
+Simple and visual.
+
+---
+
+## Step 1 — Choose Layout Type
+
+Options:
+
+* Round tables
+* Rectangular tables
+* Mixed layout
+
+---
+
+## Step 2 — Add Tables
+
+Tap:
+
+* “Add Table”
+
+Input:
+
+* Table name
+* Capacity
+
+---
+
+## Step 3 — AI Seating Option
+
+CTA:
+
+* “Auto Arrange Guests”
+
+---
+
+## AI Flow
+
+System asks:
+
+* Keep families together?
+* Prioritize VIP front seating?
+* Separate conflicting guests?
+
+Then:
+
+* Generate seating suggestions
+
+---
+
+## Step 4 — Manual Adjustment
+
+Drag guest between tables.
+
+Simple mobile gestures only.
+
+---
+
+## Step 5 — Publish Seating
+
+Guests can now see:
+
+* Table number
+* Seat number (optional)
+
+---
+
+# 1.7 Messaging Flow
+
+## Goal
+
+Familiar broadcast experience.
+
+Think:
+WhatsApp broadcast simplicity.
+
+---
+
+## Step 1
+
+Select audience:
+
+* Pending RSVP
+* Confirmed guests
+* VIP
+* Checked in
+* Aso Ebi buyers
+
+---
+
+## Step 2
+
+Choose message type:
+
+* Reminder
+* Announcement
+* Thank-you
+* Custom
+
+---
+
+## Step 3
+
+Write/edit message.
+
+---
+
+## Step 4
+
+Send immediately or schedule.
+
+---
+
+# 1.8 Aso Ebi Product Setup Flow
+
+## Step 1
+
+Enable Aso Ebi sales.
+
+---
+
+## Step 2
+
+Create Product
+
+Fields:
+
+* Fabric Name
+* Price
+* Sizes
+* Deadline
+* Images
+
+---
+
+## Step 3
+
+Set delivery options:
+
+* Pickup
+* Delivery
+
+---
+
+## Step 4
+
+Publish.
+
+Guests now see:
+“Aso Ebi Available”
+
+inside event page.
+
+---
+
+# 1.9 Logistics Management Flow
+
+## Step 1
+
+View orders dashboard.
+
+---
+
+## Step 2
+
+See:
+
+* Paid
+* Pending
+* Ready for delivery
+
+---
+
+## Step 3
+
+Assign logistics partner.
+
+---
+
+## Step 4
+
+Update delivery status.
+
+Simple status buttons:
+
+* Picked Up
+* In Transit
+* Delivered
+
+---
+
+# 1.10 Event Day Monitoring Flow
+
+## Organizer Dashboard
+
+Live stats:
+
+* Checked in
+* Pending arrival
+* Rejected scans
+* Walk-ins
+
+Realtime updates.
+
+---
+
+# 1.11 Post Event Flow
+
+## Step 1
+
+View analytics.
+
+---
+
+## Step 2
+
+Send thank-you messages.
+
+---
+
+## Step 3
+
+Export guest list.
+
+---
+
+## Step 4
+
+Duplicate previous event.
+
+Important Nigerian workflow optimization.
+
+Many users repeat event formats.
+
+---
+
+# 2. GUEST FLOW
+
+# 2.1 Invitation Reception Flow
+
+Primary channel:
+
+* WhatsApp
+
+Secondary:
+
+* SMS
+* Email
+
+---
+
+## Guest opens invite link.
+
+Page shows:
+
+* Event banner
+* Date
+* Venue
+* RSVP CTA
+
+---
+
+# 2.2 RSVP Flow
+
+Very short.
+
+---
+
+## Options:
+
+* Yes
+* No
+* Maybe
+
+---
+
+## If YES:
+
+Optional:
+
+* Plus one count
+* Dietary requests
+
+---
+
+## CTA:
+
+“Confirm Attendance”
+
+---
+
+# 2.3 QR Pass Flow
+
+After RSVP YES:
+
+System instantly generates:
+
+* QR code
+* Event details
+* Table assignment (if available)
+
+---
+
+## Important
+
+Allow:
+
+* “Save Screenshot”
+
+Nigerian users heavily rely on screenshots.
+
+Do not force wallet integrations.
+
+---
+
+# 2.4 Reminder Flow
+
+Automated reminders:
+
+* 3 days before
+* 1 day before
+* Event morning
+
+---
+
+# 2.5 Aso Ebi Purchase Flow
+
+## Step 1
+
+Guest sees:
+“Buy Event Aso Ebi”
+
+---
+
+## Step 2
+
+Select:
+
+* Size
+* Quantity
+
+---
+
+## Step 3
+
+Enter:
+
+* Delivery address
+* Phone number
+
+---
+
+## Step 4
+
+Pay with:
+
+* Card
+* Bank transfer
+* USSD
+
+Critical for Nigerian adoption.
+
+---
+
+## Step 5
+
+Receive confirmation.
+
+---
+
+# 2.6 Event Arrival Flow
+
+## Guest opens QR pass.
+
+---
+
+## Security scans QR.
+
+---
+
+## System response:
+
+* Valid
+* Already checked in
+* Invalid QR
+
+---
+
+## If valid:
+
+Guest sees:
+
+* Welcome confirmation
+* Table direction
+
+---
+
+# 3. SECURITY STAFF FLOW
+
+# 3.1 Security Login Flow
+
+Very minimal.
+
+---
+
+## Login Options:
+
+* OTP login
+* Assigned invite link
+
+Avoid password friction.
+
+---
+
+# 3.2 Event Selection Flow
+
+Security sees only:
+
+* assigned events
+
+Tap to enter scanner mode.
+
+---
+
+# 3.3 Scanner Flow
+
+Default screen:
+Camera scanner fullscreen.
+
+---
+
+## Successful Scan
+
+Display:
+
+* Guest name
+* Photo (optional future)
+* Table
+* Status
+
+Green success state.
+
+---
+
+## Duplicate Scan
+
+Red warning:
+“Already Checked In”
+
+---
+
+## Invalid Scan
+
+Red warning:
+“QR Not Recognized”
+
+---
+
+# 3.4 Offline Check-in Flow
+
+If internet drops:
+
+System shows:
+“Offline Mode Active”
+
+---
+
+## Scanner still works.
+
+Scans stored locally.
+
+---
+
+## When connection returns:
+
+Auto sync begins.
+
+No manual action required.
+
+---
+
+# 3.5 Manual Search Flow
+
+If QR fails:
+
+Search by:
+
+* Name
+* Phone number
+
+---
+
+## Then:
+
+Tap “Check In”
+
+---
+
+# 4. ADMIN FLOW
+
+# 4.1 Admin Login
+
+Secure email login only.
+
+---
+
+# 4.2 Platform Monitoring
+
+Metrics:
+
+* Active events
+* Revenue
+* Orders
+* Failed payments
+* Scan activity
+
+---
+
+# 4.3 Abuse Handling
+
+Admin can:
+
+* suspend events
+* disable accounts
+* flag suspicious QR activity
+
+---
+
+# 5. CRITICAL UX RULES
+
+# Mobile-First Rules
+
+### Use:
+
+* Bottom navigation
+* Large tap targets
+* One primary CTA per screen
+* Progressive disclosure
+
+---
+
+### Avoid:
+
+* crowded dashboards
+* long forms
+* hidden actions
+* desktop-style tables on mobile
+
+---
+
+# Nigerian UX Optimization Rules
+
+### Prioritize:
+
+* WhatsApp sharing
+* Screenshot-friendly passes
+* Fast OTP login
+* Minimal typing
+* Visible confirmations
+* USSD-compatible payment flows
+
+---
+
+### Avoid:
+
+* forcing app download
+* requiring email-only onboarding
+* requiring stable internet
+* complicated multi-step verification
+
+---
+
+# 6. KEY SYSTEM AUTOMATIONS
+
+## Automated Actions
+
+### RSVP YES
+
+→ Generate QR pass
+
+---
+
+### Seating Published
+
+→ Notify guests automatically
+
+---
+
+### Event Day
+
+→ Activate offline sync mode
+
+---
+
+### Successful Check-in
+
+→ Mark attendance instantly
+
+---
+
+### Aso Ebi Purchase
+
+→ Create logistics record automatically
+
+---
+
+### Delivery Completed
+
+→ Notify guest automatically

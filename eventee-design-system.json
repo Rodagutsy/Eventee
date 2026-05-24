@@ -1,0 +1,828 @@
+{
+  "meta": {
+    "product": "EvenTee",
+    "version": "1.0.0",
+    "description": "EvenTee Design System — Typography, Color, Spacing, Components, Icons, Elevation, Motion, and States for mobile-first event management",
+    "team": "EvenTee",
+    "status": "In Progress",
+    "lastUpdated": "2026-04-23"
+  },
+  "typography": {
+    "fonts": {
+      "display": {
+        "family": "Bricolage Grotesque",
+        "source": "Google Fonts",
+        "license": "Free / OFL",
+        "weights": [
+          600,
+          700
+        ],
+        "usage": "Page titles, section headers, event names"
+      },
+      "body": {
+        "family": "Inter",
+        "source": "Google Fonts",
+        "license": "Free / OFL",
+        "weights": [
+          400,
+          500,
+          600
+        ],
+        "usage": "All UI text, guest data, form labels, buttons"
+      },
+      "mono": {
+        "family": "SF Mono, Fira Code, monospace",
+        "usage": "QR tokens and codes only"
+      }
+    },
+    "scale": {
+      "display-hero": {
+        "fontSize": "64px",
+        "lineHeight": 1.0,
+        "fontWeight": 700,
+        "fontFamily": "Bricolage Grotesque",
+        "letterSpacing": "-3px",
+        "usage": "Hero / landing headline"
+      },
+      "display": {
+        "fontSize": "48px",
+        "lineHeight": 1.05,
+        "fontWeight": 700,
+        "fontFamily": "Bricolage Grotesque",
+        "letterSpacing": "-2px",
+        "usage": "Page-level headings"
+      },
+      "heading-1": {
+        "fontSize": "36px",
+        "lineHeight": 1.1,
+        "fontWeight": 700,
+        "fontFamily": "Bricolage Grotesque",
+        "letterSpacing": "-1.5px",
+        "usage": "Section titles, auth pages"
+      },
+      "heading-2": {
+        "fontSize": "26px",
+        "lineHeight": 1.2,
+        "fontWeight": 600,
+        "fontFamily": "Bricolage Grotesque",
+        "letterSpacing": "-0.8px",
+        "usage": "Panel headings, modal titles"
+      },
+      "heading-3": {
+        "fontSize": "20px",
+        "lineHeight": 1.3,
+        "fontWeight": 600,
+        "fontFamily": "Bricolage Grotesque",
+        "letterSpacing": "-0.4px",
+        "usage": "Card titles, sidebar headings, event names"
+      },
+      "body-lg": {
+        "fontSize": "16px",
+        "lineHeight": 1.7,
+        "fontWeight": 400,
+        "fontFamily": "Inter",
+        "letterSpacing": "0",
+        "usage": "Onboarding text, empty states"
+      },
+      "body": {
+        "fontSize": "14px",
+        "lineHeight": 1.6,
+        "fontWeight": 400,
+        "fontFamily": "Inter",
+        "letterSpacing": "0",
+        "usage": "Guest data, form inputs, event descriptions"
+      },
+      "body-sm": {
+        "fontSize": "13px",
+        "lineHeight": 1.6,
+        "fontWeight": 400,
+        "fontFamily": "Inter",
+        "letterSpacing": "0",
+        "usage": "Secondary info, helper text, nav items"
+      },
+      "label": {
+        "fontSize": "12px",
+        "lineHeight": 1.4,
+        "fontWeight": 500,
+        "fontFamily": "Inter",
+        "letterSpacing": "0.2px",
+        "usage": "Form labels, button text, tabs"
+      },
+      "caption": {
+        "fontSize": "11px",
+        "lineHeight": 1.5,
+        "fontWeight": 400,
+        "fontFamily": "Inter",
+        "letterSpacing": "0.1px",
+        "usage": "Timestamps, tooltips, metadata, badge text"
+      },
+      "overline": {
+        "fontSize": "10px",
+        "lineHeight": 1.4,
+        "fontWeight": 600,
+        "fontFamily": "Inter",
+        "letterSpacing": "1.5px",
+        "textTransform": "uppercase",
+        "usage": "Section labels, step counters"
+      }
+    },
+    "rules": [
+      "Always use Bricolage Grotesque for headings, Inter for everything else",
+      "Negative letter-spacing (-1.5px to -3px) on Bricolage headings only",
+      "Minimum body size is 13px (body-sm); 11px reserved for captions only",
+      "QR tokens render in monospace only",
+      "Max line length for guest descriptions: 65 characters (~65ch)"
+    ]
+  },
+  "color": {
+    "primary": {
+      "name": "Deep Indigo",
+      "base": "#4338CA",
+      "ramp": {
+        "50": "#EEF2FF",
+        "100": "#E0E7FF",
+        "200": "#C7D2FE",
+        "300": "#A5B4FC",
+        "400": "#818CF8",
+        "500": "#6366F1",
+        "600": "#4F46E5",
+        "700": "#4338CA",
+        "800": "#3730A3",
+        "900": "#312E81"
+      },
+      "usage": {
+        "700": "Brand primary — buttons, links, active states, focus rings",
+        "800": "Hover state — button hover, chip hover, active nav item",
+        "900": "Pressed state",
+        "50": "Tint background — badge bg, input focus bg, selected row",
+        "900": "Dark text on tint background"
+      },
+      "note": "Deep Indigo passes WCAG AA at base (700) with white text — use for all button sizes confidently."
+    },
+    "secondary": {
+      "name": "Champagne Gold",
+      "base": "#D4AF37",
+      "hover": "#C5A028",
+      "tint": "#FDF6E3",
+      "text": "#8B6914",
+      "usage": "Accent — VIP badges, highlights, decorative elements. Never primary actions."
+    },
+    "semantic": {
+      "success": {
+        "default": "#22C55E",
+        "tint": "#EAF7EF",
+        "tintBorder": "#BBE8CC",
+        "text": "#166534",
+        "usage": "Check-in confirmed, RSVP yes, payment complete"
+      },
+      "warning": {
+        "default": "#F59E0B",
+        "tint": "#FEF3C7",
+        "tintBorder": "#FDE68A",
+        "text": "#92400E",
+        "usage": "Duplicate scan, pending items, maybe RSVP"
+      },
+      "danger": {
+        "default": "#EF4444",
+        "tint": "#FEE2E2",
+        "tintBorder": "#FECACA",
+        "text": "#991B1B",
+        "usage": "Invalid QR, RSVP no, delete action, error state"
+      }
+    },
+    "neutral": {
+      "50": "#F8F9FA",
+      "100": "#F1F3F5",
+      "200": "#E9ECEF",
+      "300": "#DEE2E6",
+      "400": "#CED4DA",
+      "500": "#ADB5BD",
+      "600": "#6C757D",
+      "700": "#495057",
+      "800": "#343A40",
+      "900": "#212529",
+      "usage": {
+        "50": "Page background, panel background",
+        "100": "Card surface, input background, skeleton loader",
+        "300": "Dividers, card borders, input borders (default)",
+        "500": "Placeholder text, disabled icons, muted metadata",
+        "600": "Secondary body text, form helper text, captions",
+        "800": "Primary body text, headings, labels",
+        "900": "Display headings, high-emphasis text"
+      }
+    },
+    "tokens": {
+      "brand": {
+        "--color-primary": "#4338CA",
+        "--color-primary-hover": "#3730A3",
+        "--color-primary-pressed": "#312E81",
+        "--color-primary-tint": "#EEF2FF",
+        "--color-primary-text": "#312E81"
+      },
+      "secondary": {
+        "--color-secondary": "#D4AF37",
+        "--color-secondary-hover": "#C5A028",
+        "--color-secondary-tint": "#FDF6E3",
+        "--color-secondary-text": "#8B6914"
+      },
+      "semantic": {
+        "--color-success": "#22C55E",
+        "--color-success-tint": "#EAF7EF",
+        "--color-warning": "#F59E0B",
+        "--color-warning-tint": "#FEF3C7",
+        "--color-danger": "#EF4444",
+        "--color-danger-tint": "#FEE2E2"
+      },
+      "surface": {
+        "--color-bg-page": "#F8F9FA",
+        "--color-bg-card": "#FFFFFF",
+        "--color-bg-surface": "#F1F3F5",
+        "--color-border-default": "#DEE2E6",
+        "--color-text-primary": "#212529",
+        "--color-text-secondary": "#6C757D",
+        "--color-text-muted": "#ADB5BD"
+      }
+    },
+    "accessibility": {
+      "whiteOnPrimary700": {
+        "ratio": "5.8:1",
+        "level": "AA Pass"
+      },
+      "whiteOnPrimary800": {
+        "ratio": "7.1:1",
+        "level": "AAA Pass"
+      },
+      "darkOnTint50": {
+        "ratio": "12.5:1",
+        "level": "AAA Pass"
+      },
+      "bodyOnPageBg": {
+        "ratio": "18.1:1",
+        "level": "AAA Pass"
+      }
+    },
+    "darkMode": {
+      "rule": "Flip tint stops: 50 → 900, 100 → 800, 200 → 700. Text on tints flips from 900 to 200.",
+      "primaryButton": "Stays #4338CA — no change needed in dark mode"
+    },
+    "rules": [
+      "Primary #4338CA is for interactive elements only — never decorative backgrounds",
+      "Deep Indigo passes AA at base with white text — use for all button sizes confidently",
+      "Never use color as the only differentiator — always pair with icon, label or pattern",
+      "Use tint (50) for subtle context backgrounds, not emphasis",
+      "Champagne Gold #D4AF37 is for accent only — never primary actions"
+    ]
+  },
+  "spacing": {
+    "base": "4px",
+    "scale": {
+      "space-1": "4px",
+      "space-2": "8px",
+      "space-3": "12px",
+      "space-4": "16px",
+      "space-5": "20px",
+      "space-6": "24px",
+      "space-8": "32px",
+      "space-10": "40px",
+      "space-12": "48px",
+      "space-16": "64px"
+    },
+    "usage": {
+      "space-1": "Icon padding, micro gaps",
+      "space-2": "Inline element gaps, badge padding",
+      "space-3": "Button padding (sm), input gaps",
+      "space-4": "Card padding, form field spacing",
+      "space-5": "Button padding (lg), list item gaps",
+      "space-6": "Section padding, card internal spacing",
+      "space-8": "Between cards, modal padding",
+      "space-10": "Section breaks, panel top padding",
+      "space-12": "Page-level section separators",
+      "space-16": "Hero sections, top-of-page breathing room"
+    },
+    "layout": {
+      "desktop": {
+        "structure": "Sidebar + workspace",
+        "sidebar": "220px fixed",
+        "workspace": "fluid (remaining width)"
+      },
+      "tablet": "Sidebar collapses to icon rail (56px)",
+      "mobile": "Full-width stacked, bottom tab bar (Events, Guests, Scan, Orders)"
+    },
+    "borderRadius": {
+      "radius-sm": "4px",
+      "radius-md": "8px",
+      "radius-lg": "12px",
+      "radius-full": "999px",
+      "usage": {
+        "radius-sm": "Badges, chips, tags, code blocks",
+        "radius-md": "Buttons, inputs, nav items",
+        "radius-lg": "Cards, panels, modals",
+        "radius-full": "Pills, step indicators, avatars"
+      }
+    }
+  },
+  "components": {
+    "button": {
+      "variants": {
+        "primary": {
+          "background": "#4338CA",
+          "color": "#FFFFFF",
+          "border": "none",
+          "hover": {
+            "background": "#3730A3"
+          },
+          "pressed": {
+            "background": "#312E81"
+          },
+          "usage": "Create event, check in guest, confirm RSVP"
+        },
+        "secondary": {
+          "background": "transparent",
+          "color": "#343A40",
+          "border": "0.5px solid #DEE2E6",
+          "hover": {
+            "background": "#F1F3F5"
+          },
+          "usage": "Cancel, back, skip"
+        },
+        "ghost": {
+          "background": "transparent",
+          "color": "#4338CA",
+          "border": "none",
+          "usage": "Edit event, view details, inline actions"
+        },
+        "danger": {
+          "background": "transparent",
+          "color": "#EF4444",
+          "border": "0.5px solid #FECACA",
+          "usage": "Delete event, remove guest"
+        }
+      },
+      "sizes": {
+        "sm": {
+          "fontSize": "12px",
+          "padding": "5px 12px",
+          "borderRadius": "6px"
+        },
+        "md": {
+          "fontSize": "13px",
+          "padding": "8px 16px",
+          "borderRadius": "8px"
+        },
+        "lg": {
+          "fontSize": "15px",
+          "padding": "12px 24px",
+          "borderRadius": "10px"
+        }
+      },
+      "disabled": {
+        "opacity": 0.4,
+        "cursor": "not-allowed"
+      }
+    },
+    "input": {
+      "default": {
+        "fontSize": "14px",
+        "padding": "9px 12px",
+        "borderRadius": "8px",
+        "border": "0.5px solid #DEE2E6",
+        "background": "#FFFFFF"
+      },
+      "states": {
+        "focus": {
+          "border": "1.5px solid #4338CA",
+          "background": "#EEF2FF",
+          "boxShadow": "0 0 0 3px rgba(67,56,202,0.12)"
+        },
+        "error": {
+          "border": "1.5px solid #EF4444",
+          "background": "#FEE2E2",
+          "boxShadow": "0 0 0 3px rgba(239,68,68,0.10)"
+        },
+        "disabled": {
+          "opacity": 0.5,
+          "cursor": "not-allowed"
+        }
+      }
+    },
+    "guestCard": {
+      "description": "Core EvenTee component — one card per guest in the guest list",
+      "structure": {
+        "header": {
+          "background": "#F1F3F5",
+          "borderBottom": "0.5px solid #DEE2E6",
+          "contains": [
+            "guestName",
+            "categoryBadge",
+            "actionButtons"
+          ]
+        },
+        "body": {
+          "padding": "14px",
+          "contains": [
+            "contactInfo",
+            "rsvpStatus",
+            "checkinTime",
+            "tableAssignment"
+          ]
+        }
+      },
+      "categoryColors": {
+        "vip": "#D4AF37",
+        "regular": "#94A3B8",
+        "family": "#3B82F6",
+        "friends": "#22C55E",
+        "corporate": "#818CF8",
+        "media": "#A855F7",
+        "other": "#9CA3AF"
+      },
+      "actionButtons": [
+        "View",
+        "Message",
+        "Edit"
+      ]
+    },
+    "badge": {
+      "variants": {
+        "published": {
+          "background": "#EEF2FF",
+          "color": "#312E81"
+        },
+        "saved": {
+          "background": "#EAF7EF",
+          "color": "#166534"
+        },
+        "draft": {
+          "background": "#F1F3F5",
+          "color": "#495057"
+        },
+        "checkedIn": {
+          "background": "#EAF7EF",
+          "color": "#166534"
+        },
+        "duplicate": {
+          "background": "#FEF3C7",
+          "color": "#92400E"
+        },
+        "invalid": {
+          "background": "#FEE2E2",
+          "color": "#991B1B"
+        },
+        "vip": {
+          "background": "#FDF6E3",
+          "color": "#8B6914"
+        }
+      },
+      "fontSize": "11px",
+      "fontWeight": 600,
+      "padding": "3px 8px",
+      "borderRadius": "999px"
+    },
+    "scanResult": {
+      "description": "EvenTee scanner overlay — shown after QR code scan",
+      "variants": {
+        "success": {
+          "background": "#EAF7EF",
+          "border": "0.5px solid #BBE8CC",
+          "icon": "Check",
+          "iconColor": "#22C55E",
+          "autoDismiss": "3000ms"
+        },
+        "duplicate": {
+          "background": "#FEF3C7",
+          "border": "0.5px solid #FDE68A",
+          "icon": "AlertTriangle",
+          "iconColor": "#F59E0B",
+          "autoDismiss": "2000ms"
+        },
+        "invalid": {
+          "background": "#FEE2E2",
+          "border": "0.5px solid #FECACA",
+          "icon": "XCircle",
+          "iconColor": "#EF4444",
+          "autoDismiss": "2000ms"
+        }
+      },
+      "borderRadius": "12px",
+      "padding": "20px"
+    },
+    "modal": {
+      "overlay": "rgba(0, 0, 0, 0.4)",
+      "card": {
+        "background": "#FFFFFF",
+        "border": "1.5px solid #CED4DA",
+        "borderRadius": "12px",
+        "padding": "24px"
+      }
+    }
+  },
+  "icons": {
+    "library": "Lucide Icons",
+    "source": "lucide.dev",
+    "license": "MIT",
+    "version": "latest",
+    "install": "npm install lucide-react",
+    "style": "Outlined only — never filled",
+    "strokeWidth": "2px",
+    "sizes": {
+      "sm": "16px (UI / inline — inside buttons, form labels, inline text)",
+      "md": "20px (Action — primary CTAs, card action buttons)",
+      "lg": "24px (Decorative — empty states, section headers, nav)"
+    },
+    "colorRule": "Icons inherit from parent text color token",
+    "set": {
+      "event": {
+        "icon": "Calendar",
+        "usage": "Events nav, empty state"
+      },
+      "guest": {
+        "icon": "Users",
+        "usage": "Guest list nav, empty state"
+      },
+      "scan": {
+        "icon": "ScanLine",
+        "usage": "QR scanner, check-in tab"
+      },
+      "checkin": {
+        "icon": "CheckSquare",
+        "usage": "Checked-in indicator"
+      },
+      "seating": {
+        "icon": "LayoutGrid",
+        "usage": "Seating editor nav"
+      },
+      "commerce": {
+        "icon": "ShoppingCart",
+        "usage": "Aso Ebi shop, orders"
+      },
+      "message": {
+        "icon": "MessageSquare",
+        "usage": "Messaging, send invites"
+      },
+      "logistics": {
+        "icon": "Truck",
+        "usage": "Delivery management"
+      },
+      "analytics": {
+        "icon": "BarChart3",
+        "usage": "Event analytics"
+      },
+      "search": {
+        "icon": "Search",
+        "usage": "Search guests"
+      },
+      "qrcode": {
+        "icon": "QrCode",
+        "usage": "QR pass generation"
+      },
+      "error": {
+        "icon": "XCircle",
+        "usage": "Error state, invalid QR"
+      },
+      "warning": {
+        "icon": "AlertTriangle",
+        "usage": "Duplicate scan warning"
+      },
+      "success": {
+        "icon": "Check",
+        "usage": "Check-in confirmed, RSVP saved"
+      },
+      "delete": {
+        "icon": "Trash2",
+        "usage": "Delete event, remove guest"
+      },
+      "invite": {
+        "icon": "Send",
+        "usage": "Send invites"
+      },
+      "settings": {
+        "icon": "Settings",
+        "usage": "Settings nav"
+      },
+      "account": {
+        "icon": "User",
+        "usage": "Account / profile"
+      },
+      "copy": {
+        "icon": "Copy",
+        "usage": "Copy invite link"
+      },
+      "download": {
+        "icon": "Download",
+        "usage": "Save QR pass screenshot"
+      },
+      "filter": {
+        "icon": "Filter",
+        "usage": "Filter guest list"
+      },
+      "export": {
+        "icon": "FileText",
+        "usage": "Export guest list (CSV)"
+      },
+      "whatsapp": {
+        "icon": "MessageCircle",
+        "usage": "WhatsApp sharing"
+      },
+      "email": {
+        "icon": "Mail",
+        "usage": "Email channel"
+      },
+      "sms": {
+        "icon": "Smartphone",
+        "usage": "SMS channel"
+      },
+      "wallet": {
+        "icon": "Wallet",
+        "usage": "Payment / Paystack"
+      },
+      "add": {
+        "icon": "Plus",
+        "usage": "New event, add guest"
+      },
+      "close": {
+        "icon": "X",
+        "usage": "Close / dismiss"
+      },
+      "navigate": {
+        "icon": "ChevronRight",
+        "usage": "Navigation arrow"
+      },
+      "mobileMenu": {
+        "icon": "Menu",
+        "usage": "Mobile navigation toggle"
+      }
+    }
+  },
+  "elevation": {
+    "description": "Border-based elevation only — no box-shadows",
+    "levels": {
+      "0": {
+        "border": "0.5px solid #DEE2E6",
+        "usage": "Guest cards, event cards, default cards"
+      },
+      "1": {
+        "border": "0.5px solid #CED4DA",
+        "usage": "Focused cards, panels"
+      },
+      "2": {
+        "border": "1px solid #ADB5BD",
+        "usage": "Dropdowns, popovers"
+      },
+      "3": {
+        "border": "1.5px solid #ADB5BD",
+        "usage": "Modals, toasts"
+      }
+    },
+    "overlay": {
+      "background": "rgba(0, 0, 0, 0.4)",
+      "usage": "Modal backdrop"
+    },
+    "focusRing": "0 0 0 3px rgba(67,56,202,0.12)"
+  },
+  "motion": {
+    "tokens": {
+      "duration-instant": {
+        "value": "80ms",
+        "easing": "ease-out",
+        "usage": "Button active press, toggle flick"
+      },
+      "duration-fast": {
+        "value": "150ms",
+        "easing": "ease-out",
+        "usage": "Hover states, scan confirmation flash"
+      },
+      "duration-normal": {
+        "value": "200ms",
+        "easing": "ease-in-out",
+        "usage": "Tab switch, badge appear"
+      },
+      "duration-enter": {
+        "value": "300ms",
+        "easing": "ease-out",
+        "usage": "Check-in result slide-in, QR pass reveal"
+      },
+      "duration-modal": {
+        "value": "250ms",
+        "easing": "ease-out",
+        "usage": "Modal / drawer open"
+      },
+      "duration-loading": {
+        "value": "1200ms",
+        "easing": "linear",
+        "loop": true,
+        "usage": "Verification spinner"
+      }
+    },
+    "keyMoments": {
+      "scanResult": {
+        "description": "EvenTee's core magic moment — must feel satisfying",
+        "steps": [
+          "Spinner appears with label 'Verifying QR code...'",
+          "Verification received in < 500ms",
+          "Result card slides in from top, 300ms ease-out",
+          "Success: green check · Duplicate: amber warning · Invalid: red X",
+          "Auto-dismiss: 3000ms (success) / 2000ms (error)"
+        ]
+      },
+      "rsvpConfirm": {
+        "description": "Guest-facing — must feel rewarding",
+        "steps": [
+          "RSVP button shows inline spinner",
+          "Button turns green (Yes) and shows Check icon at 150ms",
+          "QR pass card slides in below at 300ms",
+          "'Attendance Confirmed!' heading appears"
+        ]
+      },
+      "copyConfirmation": {
+        "description": "Inline — no toast needed",
+        "steps": [
+          "Copy icon → Check icon in 150ms",
+          "Icon color turns #22C55E (success)",
+          "Holds for 1800ms",
+          "Fades back to Copy icon at 150ms"
+        ]
+      }
+    },
+    "accessibilityRule": "All animations must respect prefers-reduced-motion. When active: skip all transitions except opacity fades at 150ms. No sliding, staggering, or rotation."
+  },
+  "states": {
+    "empty": {
+      "eventList": {
+        "icon": "Calendar (Lucide, 40px, #ADB5BD)",
+        "heading": "No events yet",
+        "body": "Create your first event to start managing guests, seating, and check-in.",
+        "cta": {
+          "label": "Create event",
+          "variant": "primary"
+        }
+      },
+      "guestList": {
+        "icon": "Users (Lucide, 40px, #ADB5BD)",
+        "heading": "No guests yet",
+        "body": "Add guests via CSV upload, manual entry, or share the registration link.",
+        "cta": {
+          "label": "Add guests",
+          "variant": "primary"
+        }
+      },
+      "seating": {
+        "icon": "LayoutGrid (Lucide, 40px, #ADB5BD)",
+        "heading": "No tables yet",
+        "body": "Add tables to create your event seating layout and assign guests.",
+        "cta": {
+          "label": "Add table",
+          "variant": "primary"
+        }
+      }
+    },
+    "loading": {
+      "spinner": {
+        "size": "36px",
+        "trackColor": "#EEF2FF",
+        "activeColor": "#4338CA",
+        "duration": "1200ms linear infinite"
+      },
+      "label": "Processing...",
+      "skeleton": {
+        "lines": 4,
+        "widths": [
+          "100%",
+          "90%",
+          "80%",
+          "70%"
+        ],
+        "animation": "pulse 1.5s ease-in-out infinite"
+      }
+    },
+    "error": {
+      "border": "0.5px solid #FECACA",
+      "background": "#FEE2E2",
+      "icon": "XCircle (Lucide, 16px, #A32D2D)",
+      "heading": "Something went wrong",
+      "body": "Please try again.",
+      "cta": {
+        "label": "Try again",
+        "variant": "danger"
+      }
+    },
+    "toast": {
+      "position": "bottom-right",
+      "elevation": 3,
+      "autoDismiss": "3000ms",
+      "variants": {
+        "success": {
+          "dot": "#22C55E",
+          "usage": "Check-in confirmed, RSVP saved, guests imported"
+        },
+        "error": {
+          "dot": "#EF4444",
+          "usage": "Operation failed"
+        },
+        "info": {
+          "dot": "#4338CA",
+          "usage": "Offline sync complete"
+        }
+      }
+    }
+  }
+}
